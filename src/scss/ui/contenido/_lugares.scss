@@ -1,0 +1,28 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.lugares {
+  &__grid {
+    @include m.scrollHorizontal(30rem, 2rem);
+
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+      overflow: hidden;
+    }
+
+    @include m.desktop {
+      @include m.grid(4, 2rem);
+      overflow: hidden;
+    }
+  }
+}
+
+.lugar {
+  &__imagen {
+    border-radius: 1rem;
+  }
+
+  &__nombre {
+    font-size: 1.8rem;
+  }
+}
